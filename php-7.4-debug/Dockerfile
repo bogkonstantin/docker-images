@@ -8,9 +8,8 @@ RUN apt-get update && \
     unzip
 
 RUN docker-php-ext-configure \
-    zip --with-libzip \
+    zip \
     && docker-php-ext-install \
-    pdo \
     pdo_mysql \
     zip
 
@@ -22,6 +21,10 @@ RUN pecl install xdebug \
 RUN curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && mkdir /var/www/.composer \
     && chown www-data:www-data /var/www/.composer
+
+RUN curl https://phar.phpunit.de/phpunit-7.phar -L -o phpunit.phar \
+    && chmod +x phpunit.phar \
+    && mv phpunit.phar /usr/local/bin/phpunit
 
 RUN usermod -u 1000 www-data
 
