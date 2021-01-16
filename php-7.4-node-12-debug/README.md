@@ -16,7 +16,7 @@ services:
   php:
     image: bogkonstantin/php-7.4-node-12-debug:latest
     environment:
-      XDEBUG_CONFIG: "remote_host=172.17.0.1 remote_port=9003"
+      XDEBUG_CONFIG: "client_host=172.17.0.1 client_host=9003"
       PHP_IDE_CONFIG: serverName=localhost
     volumes:
       - ./src:/var/www/src
