@@ -5,13 +5,15 @@ RUN apt-get update && \
     git \
     libzip-dev \
     zip \
-    unzip
+    unzip \
+    libpng-dev
 
 RUN docker-php-ext-configure \
     zip \
     && docker-php-ext-install \
     pdo_mysql \
-    zip
+    zip \
+    gd
 
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug \
