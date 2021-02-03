@@ -11,6 +11,7 @@ RUN apt-get update && \
 
 RUN docker-php-ext-configure \
     zip \
+    && docker-php-ext-configure gd --with-jpeg \
     && docker-php-ext-install \
     pdo_mysql \
     zip \
