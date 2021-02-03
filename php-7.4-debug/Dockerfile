@@ -6,7 +6,8 @@ RUN apt-get update && \
     libzip-dev \
     zip \
     unzip \
-    libpng-dev
+    libpng-dev \
+    libjpeg-dev
 
 RUN docker-php-ext-configure \
     zip \
