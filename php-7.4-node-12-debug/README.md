@@ -1,9 +1,10 @@
-PHP 7.4 FPM  
+PHP 7.4 FPM (with zip, gd, pdo_mysql extensions)  
 Xdebug 3  
 Composer 2  
 PHP Unit 7  
 NodeJS 12  
 Yarn  
+Git  
 User `www-data`
 
 Use it, for example, for Symfony or Laravel local development without frontend.
