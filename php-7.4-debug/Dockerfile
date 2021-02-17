@@ -7,7 +7,9 @@ RUN apt-get update && \
     zip \
     unzip \
     libpng-dev \
-    libjpeg-dev
+    libjpeg-dev \
+    whois \
+    netbase
 
 RUN docker-php-ext-configure \
     zip \
